@@ -32,9 +32,7 @@ function ListaSeguros() {
 
             setIsLoading(true)
 
-            await buscar('/produtos', setProdutos, {
-                // headers: { Authorization: token }
-            })
+            await buscar('/produtos', setProdutos,)
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 // handleLogout()

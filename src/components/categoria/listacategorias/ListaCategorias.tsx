@@ -1,15 +1,10 @@
 import { useEffect, useState } from "react";
 import { SyncLoader } from "react-spinners";
-import CardCategoria from "../cardcategoria/CardCategoria";
-<<<<<<< HEAD
-import { buscar } from "../../../service/Service";
-import type Categoria from "../../../models/Categoria";
-=======
 import type Categoria from "../../../models/Categoria";
 import { buscar } from "../../../service/Service";
 import { useNavigate } from "react-router-dom";
+import CardCategoria from "../cardcategoria/CardCategoria";
 
->>>>>>> Manuella
 
 function ListaCategorias() {
 

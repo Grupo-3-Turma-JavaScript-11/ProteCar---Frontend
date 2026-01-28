@@ -19,11 +19,7 @@ function DeletarSeguro() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/produtos/${id}`, setProduto, {
-                headers: {
-                    // 'Authorization': token
-                }
-            })
+            await buscar(`/produtos/${id}`, setProduto,)
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 // handleLogout()
@@ -48,11 +44,7 @@ function DeletarSeguro() {
         setIsLoading(true)
 
         try {
-            await deletar(`/produtos/${id}`, {
-                headers: {
-                    // 'Authorization': token
-                }
-            })
+            await deletar(`/produtos/${id}`, )
 
             alert('Produto apagado com sucesso')
 
