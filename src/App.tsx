@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ListaSeguros from './components/seguro/listaseguros/ListaSeguros'
 import FormSeguro from './components/seguro/formseguro/FormSeguro'
 import DeletarSeguro from './components/seguro/deletarseguro/DeletarSeguro'
+import ListaCategorias from './assets/components/categoria/listacategorias/ListaCategorias'
+import FormCategoria from './assets/components/categoria/formcategoria/FormCategoria'
+import DeletarCategoria from './assets/components/categoria/deletarcategoria/DeletarCategoria'
 
 function App() {
 	return (
