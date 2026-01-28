@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import './App.css'
-import Navbar from './components/navbar/Navbar'
-import Home from './page/home/Home'
-import Footer from './components/footer/Footer'
-
-function App() {
-
-  return (
-    <>
-      <Navbar/>
-      <Home/>
-      <Footer/>
-    </>
-  )
-=======
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ListaSeguros from './components/seguro/listaseguros/ListaSeguros'
 import FormSeguro from './components/seguro/formseguro/FormSeguro'
@@ -50,7 +33,6 @@ function App() {
 			{/* </AuthProvider> */}
 		</>
 	)
->>>>>>> 30ee3c68556531732bfb3398e8db25824af69ca2
 }
 
 export default App

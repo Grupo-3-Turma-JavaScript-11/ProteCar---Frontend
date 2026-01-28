@@ -18,8 +18,6 @@ function FormSeguro() {
     const [produto, setProduto] = useState<Produto>({ 
         id: 0, numeroApolice: '', anoCarro: '', valor: 0, dataInicio: '', dataFim: '',} as Produto)
 
-    console.log(produto)
-
     // const { usuario, handleLogout } = useContext(AuthContext)
     // const token = usuario.token
 
@@ -184,23 +182,47 @@ function FormSeguro() {
                         required
                         className="border-2 border-slate-700 rounded p-2"
                          value={produto.anoCarro}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}                       
                     />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="titulo">Data de Início da Apólice</label>
+                        <input
+                            type="text"
+                            placeholder="Data de Início da Apólice"
+                            name="dataInicio"
+                            required
+                            className="border-2 border-slate-700 rounded p-2"
+                            value={produto.dataInicio}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="titulo">Data de Vencimento da Apólice</label>
+                        <input
+                            type="text"
+                            placeholder="Data de Vencimento da Apólice"
+                            name="dataFim"
+                            required
+                            className="border-2 border-slate-700 rounded p-2"
+                            value={produto.dataFim}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        />
                 </div>
                 <div className="flex flex-col gap-2">
                     <p>Categoria do Produto</p>
                     <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' 
-                        onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
+                    onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
                     >
-                        <option value="" selected disabled>Selecione uma Categoria</option>
-                        
-                        {categorias.map((categoria) => (
-                            <>
-                                <option value={categoria.id} >{categoria.descricao}</option>
-                            </>
-                        ))}
+                    <option value="" selected disabled>Selecione uma Categoria</option>
+                    
+                    {categorias.map((categoria) => (
+                        <>
+                            <option value={categoria.id} >{categoria.descricao}</option>
+                        </>
+                    ))}
 
-                    </select>
+                </select>
                 </div>
                 <button 
                     type='submit' 
@@ -209,7 +231,7 @@ function FormSeguro() {
                                disabled={carregandoCategoria}
                 >
                     { isLoading ? 
-                            <ClipLoader 
+                            <ClipLoader
                                 color="#ffffff" 
                                 size={24}
                             /> : 
@@ -218,7 +240,8 @@ function FormSeguro() {
 
                 </button>
             </form>
-        </div>
+            </div>
+    
     );
 }
 
