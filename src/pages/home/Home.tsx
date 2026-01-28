@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import CardAvaliacao from "../../componentes/home/CardAvaliacao"
-import CardPassos from "../../componentes/home/CardPassos"
-import CardPlano from "../../componentes/home/CardPlano"
+import CardAvaliacao from "../../components/home/CardAvaliacao"
+import CardPassos from "../../components/home/CardPassos"
+import CardPlano from "../../components/home/CardPlano"
 import type Categoria from "../../models/Categoria"
 import { buscar } from "../../service/Service"
 
@@ -17,7 +17,7 @@ function Home(){
     async function buscarCategorias() {
         try {
 
-            await buscar('/categorias', setCategorias, {})
+            await buscar('/categorias', setCategorias)
         } catch (error: any) {
             if (error.toString().includes('401')) {
             alert('nao')
@@ -28,7 +28,7 @@ function Home(){
     return(
         <>
         <section className="min-h-[60vh] flex items-center">
-            <img src="/bannerHome.png" alt="Banner" className="w-full min-h-[60vh] absolute z-1 "/>
+            <img src="/bannerHome.png" alt="Banner" className="w-full min-h-[60vh] absolute z-1 top-20"/>
             <div className="h-40 flex flex-col justify-between font-bold text-white text-5xl z-2 relative pl-20">
                 <h2>Inicie um novo mês 
                 <br /> 
@@ -37,7 +37,7 @@ function Home(){
             </div>
         </section>
         <section className="pl-20 pr-20 w-full flex justify-center flex-col items-center relative">
-            <div className="bg-blue-950 w-full md:w-2/3 grid md:grid-cols-2 grid-cols-1 gap-5 rounded-3xl p-5 items-center mt-30">
+            <div className="bg-blue-950 w-full md:w-2/3 grid md:grid-cols-2 grid-cols-1 gap-5 rounded-3xl p-5 items-center mt-70">
                 <img src="/imgTipos.svg" alt="carro vermelho" className="transform transition duration-300 hover:scale-105 hover:shadow-2xl" />
                 <div className="h-2/3 flex flex-col justify-between p-2 text-white w-2/3">
                     <h2 className="text-2xl font-bold">DO BÁSICO AO MAIS COMPLETO</h2>
@@ -56,9 +56,9 @@ function Home(){
                 </div>
             </div>
 
-            <div className="bg-gray-200 md:w-2/3 flex flex-col w-full justify-between items-center mt-40 rounded-2xl p-10">
-                <h2 className="text-black text-4xl font-bold"><span className="text-blue-800">Planos</span> prontos para você</h2>
-                <div className="flex mt-20 gap-5 flex-wrap justify-center">
+            <div className="bg-gray-100 md:w-2/3 flex flex-col w-full justify-between items-center mt-40 rounded-2xl p-10 ">
+                <h2 className="text-black text-4xl font-bold mt-10"><span className="text-blue-800">Planos</span> prontos para você</h2>
+                <div className="flex mt-20 gap-5 flex-wrap justify-center mb-10">
                     {
                                 categorias.map((categoria) => (
                                     <CardPlano key={categoria.id} categoria={categoria}/>
@@ -70,7 +70,7 @@ function Home(){
             </div>
             <div className="w-full mt-30 justify-center items-center flex flex-col mb-120">
                 <h2 className="text-blue-950 font-bold text-3xl mb-40 self-start">CONTRATE ONLINE EM POUCOS PASSOS</h2>
-                <div className="flex gap-10 flex-wrap justify-center">
+                <div className="flex gap-15 flex-wrap justify-center">
                     <CardPassos tipo="Informações" titulo="Passo 1: " img="/text.png" descricao="Preencha seus dados e responda algumas perguntas"/>
                     <CardPassos tipo="Informações" titulo="Passo 2: " img="/pointer.png" descricao="Selecione o plano desejado"/>
                     <CardPassos tipo="Fechamento" titulo="Passo 3: " img="/verificado.png" descricao="Após a escolha do plano ideal, agendaremos o fechamento e a vistoria do seu veículo."/>
@@ -80,7 +80,7 @@ function Home(){
 />
         </section>
         
-        <section className="bg-blue-950 p-20">
+        <section className="bg-blue-950 p-20 border-b border-gray-100">
             
             <h2 className="text-white font-bold text-3xl">QUEM JÁ CONTRATOU CONFIA</h2>
             <div className="w-full flex mt-20 gap-3 justify-center flex-wrap">
