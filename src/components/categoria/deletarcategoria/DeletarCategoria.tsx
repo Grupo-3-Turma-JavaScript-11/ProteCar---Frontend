@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+<<<<<<< HEAD
 import { ClipLoader } from "react-spinners";
 import { buscar, deletar } from "../../../service/Service";
 import type Categoria from "../../../models/Categoria";
+=======
+import type Categoria from "../../../models/Categoria"
+import { ClipLoader } from "react-spinners"
+import { buscar, deletar } from "../../../service/Service"
+
+>>>>>>> Manuella
 
 function DeletarCategoria() {
 
@@ -17,11 +24,7 @@ function DeletarCategoria() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria, {
-                headers: {
-                    
-                }
-            })
+            await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 //handleLogout()
@@ -40,11 +43,7 @@ function DeletarCategoria() {
         setIsLoading(true)
 
         try {
-            await deletar(`/categoria/${id}`, {
-                headers: {
-                    
-                }
-            })
+            await deletar(`/categoria/${id}`)
 
             alert('Categoria deletado com sucesso')
 
@@ -66,24 +65,25 @@ function DeletarCategoria() {
     
     return (
         <div className='container w-1/3 mx-auto'>
-            <h1 className='text-4xl text-center my-4'>Deletar categoria</h1>
-            <p className='text-center font-semibold mb-4'>
+            <h1 className='text-4xl text-center pd-4 pt-3 font-medium mb-2'>Deletar categoria</h1>
+            <p className='text-center font-semibold mb-8 text-gray-500'>
                 Você tem certeza de que deseja apagar a categoria a seguir?</p>
-            <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
+            <div className='flex flex-col rounded-2xl overflow-hidden justify-between bg-gray-200'>
                 <header 
-                    className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+                    className='py-2 px-6 bg-blue-950 text-white font-bold text-2xl text-center'>
                     Categoria
                 </header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
-                <div className="flex">
+                <p className='p-8 text-2xl h-full text-gray-700 font-medium'>{categoria.descricao}</p>
+                <div className="flex gap-3 p-2 mb-3">
                     <button 
-                        className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
+                        className='text-white font-semibold bg-red-700 rounded-3xl
+                    hover:bg-red-900 w-1/2 flex items-center justify-center'
                         onClick={retornar}>
                         Não
                     </button>
                     <button 
-                        className='w-full text-slate-100 bg-indigo-400 
-                                   hover:bg-indigo-600 flex items-center justify-center'
+                        className='w-1/2 text-white font-semibold bg-blue-500 rounded-3xl
+                    hover:bg-blue-900 flex items-center justify-center py-2'
                                    onClick={deletarCategoria}>
 
                         { isLoading ? 
