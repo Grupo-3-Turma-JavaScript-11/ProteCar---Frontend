@@ -37,11 +37,11 @@ function CardSeguro({ produto }: CardSegurosProps) {
 
             {/* 4. Botões lado a lado com margem e cantos arredondados */}
             <div className="flex gap-3">
-                <Link to='' className='w-full text-white bg-indigo-600 
+                <Link to={`/editarproduto/${produto.id}`} className='w-full text-white bg-indigo-600 
                     hover:bg-blue-700 flex items-center justify-center py-3 rounded-full font-bold transition-all'>
                     <button>Editar</button>
                 </Link>
-                <Link to='' className='text-white bg-red-700 
+                <Link to={`/deletarproduto/${produto.id}`} className='text-white bg-red-700 
                     hover:bg-red-900 w-full flex items-center justify-center py-3 rounded-full font-bold transition-all'>
                     <button>Deletar</button>
                 </Link>
