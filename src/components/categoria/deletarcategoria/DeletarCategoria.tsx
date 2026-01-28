@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-<<<<<<< HEAD
-import { ClipLoader } from "react-spinners";
-import { buscar, deletar } from "../../../service/Service";
-import type Categoria from "../../../models/Categoria";
-=======
 import type Categoria from "../../../models/Categoria"
 import { ClipLoader } from "react-spinners"
 import { buscar, deletar } from "../../../service/Service"
 
->>>>>>> Manuella
 
 function DeletarCategoria() {
 
