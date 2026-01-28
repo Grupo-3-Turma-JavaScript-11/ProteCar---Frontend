@@ -50,7 +50,7 @@ function FormCategoria() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/categorias`, categoria, setCategoria, {
+                await atualizar(`/categorias/${categoria.id}`, categoria, setCategoria, {
                     headers: { }
                 })
                 alert('A categoria foi atualizado com sucesso!')

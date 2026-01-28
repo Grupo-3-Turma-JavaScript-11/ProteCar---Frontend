@@ -17,15 +17,15 @@ function App() {
 							{/* <Route path="/" element={<Login />} /> */}
               {/* <Route path="/home" element={<Home />} /> */}
 							{/* <Route path="/cadastro"	element={<Cadastro />}/> */}
-              <Route path="/" element={<ListaSeguros />} />
+              				<Route path="/" element={<ListaCategorias />} />
 							<Route path="/categorias" element={<ListaCategorias/>} />
 							<Route path="/cadastrarcategoria" element={<FormCategoria />} />
 							<Route path="/editarcategoria/:id" element={<FormCategoria />} />
 							<Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
 							<Route path="/produtos" element={<ListaSeguros />} />
-              <Route path="/cadastrarproduto" element={<FormSeguro />} />
-              <Route path="/editarproduto/:id" element={<FormSeguro />} />
-              <Route path="/deletarproduto/:id" element={<DeletarSeguro />} />
+              				<Route path="/cadastrarproduto" element={<FormSeguro />} />
+              				<Route path="/editarproduto/:id" element={<FormSeguro />} />
+              				<Route path="/deletarproduto/:id" element={<DeletarSeguro />} />
 						</Routes>
 					</div>
 					{/* <Footer /> */}

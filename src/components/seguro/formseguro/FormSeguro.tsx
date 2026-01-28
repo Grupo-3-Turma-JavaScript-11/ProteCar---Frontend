@@ -101,7 +101,7 @@ function FormSeguro() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/produtos`, produto, setProduto, {
+                await atualizar(`/produtos/${produto.id}`, produto, setProduto, {
                     headers: {
                         // Authorization: token,
                     },
