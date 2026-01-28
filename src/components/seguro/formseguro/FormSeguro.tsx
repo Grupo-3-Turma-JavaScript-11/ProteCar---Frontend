@@ -18,7 +18,7 @@ function FormSeguro() {
     const [produto, setProduto] = useState<Produto>({ 
         id: 0, numeroApolice: '', anoCarro: '', valor: 0, dataInicio: '', dataFim: '',} as Produto)
 
-    console.log(produto)
+
 
     // const { usuario, handleLogout } = useContext(AuthContext)
     // const token = usuario.token
@@ -101,7 +101,7 @@ function FormSeguro() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/produtos`, produto, setProduto, {
+                await atualizar(`/produtos/${id}`, produto, setProduto, {
                     headers: {
                         // Authorization: token,
                     },

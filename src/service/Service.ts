@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const api = axios.create({
-    baseURL: "https://protecar-backend.onrender.com/"
+    baseURL: "https://protecar-backend.onrender.com"
 })
 
 export const cadastrar = async (url: string, dados: Object, setDados: Function, header: Object) => {
