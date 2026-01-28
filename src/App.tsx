@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './pages/home/Home'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <Home />
-    </>
-  )
-=======
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ListaCategorias from './assets/components/categoria/listacategorias/ListaCategorias';
 import DeletarCategoria from './assets/components/categoria/deletarcategoria/DeletarCategoria';
@@ -41,7 +25,6 @@ function App() {
 			
 		</>
 	)
->>>>>>> Jessica
 }
 
 export default App;
