@@ -15,7 +15,10 @@ function FormSeguro() {
 
     const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '', })
     
-    const [produto, setProduto] = useState<Produto>({} as Produto)
+    const [produto, setProduto] = useState<Produto>({ 
+        id: 0, numeroApolice: '', anoCarro: '', valor: 0, dataInicio: '', dataFim: '',} as Produto)
+
+    console.log(produto)
 
     // const { usuario, handleLogout } = useContext(AuthContext)
     // const token = usuario.token
@@ -163,12 +166,24 @@ function FormSeguro() {
                 <div className="flex flex-col gap-2">
                     <label htmlFor="titulo">Valor do Produto</label>
                     <input
-                        type="text"
-                        placeholder="Texto"
-                        name="texto"
+                        type="number"
+                        placeholder="Valor"
+                        name="valor"
                         required
                         className="border-2 border-slate-700 rounded p-2"
                          value={produto.valor}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="titulo">Ano Carro</label>
+                    <input
+                        type="text"
+                        placeholder="Ano Carro"
+                        name="anoCarro"
+                        required
+                        className="border-2 border-slate-700 rounded p-2"
+                         value={produto.anoCarro}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
