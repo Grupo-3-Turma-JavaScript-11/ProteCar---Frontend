@@ -25,9 +25,7 @@ function FormSeguro() {
 
     async function buscarProdutoPorId(id: string) {
         try {
-            await buscar(`/produtos/${id}`, setProduto, {
-                // headers: { Authorization: token }
-            })
+            await buscar(`/produtos/${id}`, setProduto, )
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 // handleLogout()
@@ -37,9 +35,7 @@ function FormSeguro() {
 
     async function buscarCategoriaPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria, {
-                // headers: { Authorization: token }
-            })
+            await buscar(`/categorias/${id}`, setCategoria, )
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 // handleLogout()
@@ -49,9 +45,7 @@ function FormSeguro() {
 
     async function buscarCategorias() {
         try {
-            await buscar('/categorias', setCategorias, {
-                // headers: { Authorization: token }
-            })
+            await buscar('/categorias', setCategorias,)
         } catch (error: any) {
             if (error.toString().includes('401')) {
                 // handleLogout()
@@ -99,11 +93,7 @@ function FormSeguro() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/produtos`, produto, setProduto, {
-                    headers: {
-                        // Authorization: token,
-                    },
-                });
+                await atualizar(`/produtos/${produto.id}`, produto, setProduto,);
 
                 alert('Produto atualizado com sucesso')
 
@@ -117,11 +107,7 @@ function FormSeguro() {
 
         } else {
             try {
-                await cadastrar(`/produtos`, produto, setProduto, {
-                    headers: {
-                        // Authorization: token,
-                    },
-                })
+                await cadastrar(`/produtos`, produto, setProduto,)
 
                 alert('Produto cadastrado com sucesso');
 
