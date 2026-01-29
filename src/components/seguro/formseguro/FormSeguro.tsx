@@ -171,30 +171,6 @@ function FormSeguro() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-<<<<<<< HEAD
-                    <label htmlFor="titulo">Data de Início da Apólice</label>
-                        <input
-                            type="text"
-                            placeholder="Data de Início da Apólice"
-                            name="dataInicio"
-                            required
-                            className="border-2 border-slate-700 rounded p-2"
-                            value={produto.dataInicio}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        />
-                </div>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="titulo">Data de Vencimento da Apólice</label>
-                        <input
-                            type="text"
-                            placeholder="Data de Vencimento da Apólice"
-                            name="dataFim"
-                            required
-                            className="border-2 border-slate-700 rounded p-2"
-                            value={produto.dataFim}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        />
-=======
                     <label htmlFor="titulo">dataInicio</label>
                     <input
                         type="date"
@@ -217,7 +193,6 @@ function FormSeguro() {
                          value={produto.dataFim}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
->>>>>>> 754f361d75183802c7812c8a35157b2fbbb923fd
                 </div>
                 <div className="flex flex-col gap-2">
                     <p>Categoria do Produto</p>
