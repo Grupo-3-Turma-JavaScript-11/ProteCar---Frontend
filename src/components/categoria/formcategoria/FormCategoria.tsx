@@ -1,8 +1,8 @@
 import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-import type Categoria from "../../../../models/Categoria";
-import { atualizar, buscar, cadastrar } from "../../../../service/Service";
+import type Categoria from "../../../models/Categoria";
+import { atualizar, buscar, cadastrar } from "../../../service/Service";
 
 function FormCategoria() {
 
@@ -16,9 +16,7 @@ function FormCategoria() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria, {
-                headers: {}
-            })
+            await buscar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
             if (error.toString().includes('403')) {
                // handleLogout()
@@ -50,9 +48,7 @@ function FormCategoria() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/categorias`, categoria, setCategoria, {
-                    headers: { }
-                })
+                await atualizar(`/categorias/${categoria.id}`, categoria, setCategoria)
                 alert('A categoria foi atualizado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('401')) {
@@ -64,9 +60,7 @@ function FormCategoria() {
             }
         } else {
             try {
-                await cadastrar(`/categorias`, categoria, setCategoria, {
-                    headers: {}
-                })
+                await cadastrar(`/categorias`, categoria, setCategoria)
                 alert('a Categoria foi cadastrado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('401')) {
@@ -83,27 +77,29 @@ function FormCategoria() {
     }
 
     return (
-        <div className="container flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-4xl text-center my-8">
-                {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
+        <div className="container flex flex-col items-center justify-center mx-auto ">
+        <div className=" bg-gray-200 w-1/2 p-10 flex flex-col justify-center rounded-3xl mt-30 shadow-xl/20">
+            <h1 className="text-4xl text-center font-semibold">
+                {id === undefined ? 'Cadastrar categoria' : 'Editar categoria'}
             </h1>
 
-            <form className="w-1/2 flex flex-col gap-4" 
+            <form className="flex flex-col gap-4 mt-5 w-full" 
                   onSubmit={gerarNovaCategoria} >
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição da Categoria</label>
+                    
+                    <label htmlFor="descricao" className="ml-3">Descrição da categoria</label>
                     <input
                         type="text"
-                        placeholder="Descreva aqui sua Categoria"
+                        placeholder="Descreva aqui a categoria"
                         name='descricao'
-                        className="border-2 border-slate-700 rounded p-2"
+                        className="border-2 border-blue-950 rounded-4xl p-2 pl-3 focus:outline-blue-700"
                         value={categoria.descricao}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
+                    className="rounded-4xl text-white bg-blue-800 font-medium mt-5
+                           hover:bg-blue-900 hover:text-white shadow-xl min-w-3/6 py-2 p-3 mx-auto flex justify-center"
                     type="submit">
 
                     { isLoading ? 
@@ -116,6 +112,7 @@ function FormCategoria() {
 
                 </button>
             </form>
+        </div>
         </div>
     );
 }
