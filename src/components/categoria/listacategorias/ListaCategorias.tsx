@@ -47,7 +47,21 @@ function ListaCategorias() {
                 </div>
             )}
             <div className="w-full h-screen flex flex-col p-20 items-center ">
-           <button className="bg-gradient-to-r from-blue-800 to-blue-400 mb-30 rounded-2xl text-3xl text-white font-semibold h-15 w-120 self-center hover:bg-blue-900" onClick={() => navigate('/cadastrarcategoria')}>Cadastrar nova categoria</button>
+           <button className="bg-gradient-to-r from-[#1A234E] to-blue-400 
+        mb-30 rounded-2xl text-3xl text-white font-semibold 
+        h-15 w-120 self-center 
+        
+        /* Efeito de Cor no Hover */
+        hover:from-blue-900 hover:to-blue-600 
+        
+        /* Efeito de Movimento */
+        transition-all duration-300 
+        hover:scale-105 
+        active:scale-95 
+        hover:-translate-y-1
+        
+        /* Sombra para dar profundidade */
+        hover:shadow-xl hover:shadow-blue-500/30" onClick={() => navigate('/cadastrarcategoria')}>Cadastrar Categoria</button>
 
             <div className="flex justify-center w-full my-4">
                 <div className="container flex flex-col">

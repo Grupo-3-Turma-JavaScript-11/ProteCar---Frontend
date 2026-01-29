@@ -37,7 +37,7 @@ function DeletarCategoria() {
         setIsLoading(true)
 
         try {
-            await deletar(`/categoria/${id}`)
+            await deletar(`/categorias/${id}`)
 
             alert('Categoria deletado com sucesso')
 

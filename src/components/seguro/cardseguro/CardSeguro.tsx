@@ -6,7 +6,7 @@ interface CardSegurosProps {
 }
 function CardSeguro({ produto }: CardSegurosProps) {
     return (
-        <div className='bg-[#1A234E] flex flex-col rounded-[2.5rem] overflow-hidden p-6 w-80 shadow-2xl'>
+        <div className='bg-[#1A234E] flex flex-col rounded-[2.5rem] overflow-hidden p-6 w-80 shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer'>
                 
             <div>
                 {/* 2. O cabeçalho agora é um "pill" branco arredondado */}
