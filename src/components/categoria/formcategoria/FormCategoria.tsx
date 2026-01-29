@@ -4,7 +4,6 @@ import { ClipLoader } from "react-spinners";
 import type Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
 
-
 function FormCategoria() {
 
     const navigate = useNavigate();
@@ -49,7 +48,7 @@ function FormCategoria() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/categorias`, categoria, setCategoria)
+                await atualizar(`/categorias/${categoria.id}`, categoria, setCategoria)
                 alert('A categoria foi atualizado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('401')) {

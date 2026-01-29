@@ -7,5 +7,5 @@ export default interface Produto {
     valor: number;
     dataInicio: string;
     dataFim: string;
-    categoria?: Categoria | null;
+    categoria: Categoria | null;
 }
