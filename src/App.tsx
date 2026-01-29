@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import ListaSeguros from './components/seguro/listaseguros/ListaSeguros';
 import FormSeguro from './components/seguro/formseguro/FormSeguro';
 import DeletarSeguro from './components/seguro/deletarseguro/DeletarSeguro';
+import { ToastContainer } from 'react-toastify';
 //import Footer from './components/footer/Footer'
 //import Navbar from './components/navbar/Navbar'
 
@@ -15,6 +16,7 @@ function App() {
 	return (
 		<>
 			{/* <AuthProvider> */}
+				<ToastContainer/>
 				<BrowserRouter>
 					<Navbar /> 
 					<div className="min-h-[80vh]">
