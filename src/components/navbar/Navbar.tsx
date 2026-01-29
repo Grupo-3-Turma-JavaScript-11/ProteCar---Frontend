@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
             <p className="hover:text-blue-400 hover:underline transition" >Fale Conosco</p>            
           </div>
 
+
           {/* Busca + botão */}
           <div className="flex gap-4">
             {/*put
