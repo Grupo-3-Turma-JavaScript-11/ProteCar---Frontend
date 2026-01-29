@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import ListaSeguros from './components/seguro/listaseguros/ListaSeguros';
 import FormSeguro from './components/seguro/formseguro/FormSeguro';
 import DeletarSeguro from './components/seguro/deletarseguro/DeletarSeguro';
+import SobreNos from './pages/sobrenos/SobreNos';
 //import Footer from './components/footer/Footer'
 //import Navbar from './components/navbar/Navbar'
 
@@ -30,6 +31,7 @@ function App() {
               				<Route path="/cadastrarproduto" element={<FormSeguro />} />
               				<Route path="/editarproduto/:id" element={<FormSeguro />} />
               				<Route path="/deletarproduto/:id" element={<DeletarSeguro />} />
+							<Route path="/sobrenos" element={<SobreNos />} />
 						</Routes>
 					</div>
 					<Footer />
