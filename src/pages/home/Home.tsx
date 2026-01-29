@@ -49,10 +49,14 @@ function Home(){
                 <h2 className="text-blue-900 font-bold text-3xl mb-5">COBERTURAS QUE VOCÊ PODE CONTAR</h2>
                 <div className="text-gray-700 font-medium text-xl flex flex-col gap-4">
                     <h3>✔️  Prejuízos gerados por alagamentos e enchentes, especialmente em locais de maior riscos a inundações</h3>
-                    <h3>✔️  Prejuízos gerados por alagamentos e enchentes, especialmente em locais de maior riscos a inundações</h3>
-                    <h3>✔️  Prejuízos gerados por alagamentos e enchentes, especialmente em locais de maior riscos a inundações</h3>
-                    <h3>✔️  Prejuízos gerados por alagamentos e enchentes, especialmente em locais de maior riscos a inundações</h3>
-                    <h3>✔️  Prejuízos gerados por alagamentos e enchentes, especialmente em locais de maior riscos a inundações</h3>
+                    <h3>✔️  Danos causados por colisões, capotamentos e saídas de pista</h3>
+                    <h3>✔️  Incêndio, explosão e quedas de raio</h3>
+                    <h3>✔️  Roubo, furto e tentativa de arrombamento</h3>
+                    <h3>✔️  Perda total ou parcial do veículo por acidentes</h3>
+                    <h3>✔️  Danos causados por fenômenos da natureza (granizo, vendaval, deslizamentos)</h3>
+                    <h3>✔️  Cobertura para terceiros (danos materiais e corporais, conforme o plano contratado)</h3>
+                    <h3>✔️  Quebra de vidros, faróis, lanternas e retrovisores</h3>
+                    <h3>✔️  Assistência 24h em caso de pane elétrica ou mecânica</h3>
                 </div>
             </div>
 
@@ -85,9 +89,9 @@ function Home(){
             <h2 className="text-white font-bold text-3xl">QUEM JÁ CONTRATOU CONFIA</h2>
             <div className="w-full flex mt-20 gap-3 justify-center flex-wrap">
                 
-                <CardAvaliacao descricao="A Equipe é muito prestativa, competente e sempre me auxilia nos momentos em que preciso tomar decisões importantes sobre proteção para o meu patrimônio e para minha família." autor="Ana A." lugar="Campinas - SP" />
-                <CardAvaliacao descricao="Sou cliente há alguns anos, e desde o início, o que mais me agradou é ter um atendimento humano de qualidade e tecnologia para contratar um seguro de maneira simples e rápida.." autor="João C." lugar="Brasília - DF" />
-                <CardAvaliacao descricao="Explicam de uma forma clara e objetiva, me auxiliam nas dúvidas e estão dispostos a fazer sempre o melhor para nós consumidores. Amo e recomendo!" autor="Rodrigo M." lugar="Guarulhos - SP" />
+                <CardAvaliacao descricao="Contratei pelo preço, mas continuei pela qualidade do serviço. É bom saber que posso contar com um suporte eficiente quando mais preciso." autor="Ana A." lugar="Campinas - SP" />
+                <CardAvaliacao descricao="Já tive experiências ruins com outras seguradoras, mas aqui foi diferente. Transparência, agilidade e um atendimento que realmente se importa com o cliente." autor="João C." lugar="Brasília - DF" />
+                <CardAvaliacao descricao="Precisei acionar o seguro uma vez e fui surpreendido pela rapidez no atendimento. Em poucos minutos já tinham me orientado sobre todos os próximos passos. Me senti muito seguro e bem assistido." autor="Rodrigo M." lugar="Guarulhos - SP" />
                 
             </div>
         </section>
