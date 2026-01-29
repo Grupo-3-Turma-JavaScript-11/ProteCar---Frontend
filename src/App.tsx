@@ -5,6 +5,7 @@ import FormCategoria from './components/categoria/formcategoria/FormCategoria';
 import DeletarCategoria from './components/categoria/deletarcategoria/DeletarCategoria';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import AboutPage from './pages/sobre/Sobre';
 //import Footer from './components/footer/Footer'
 //import Navbar from './components/navbar/Navbar'
 
@@ -21,6 +22,7 @@ function App() {
 							<Route path="/cadastrarcategoria" element={<FormCategoria />} />
 							<Route path="/editarcategoria/:id" element={<FormCategoria />} />
 							<Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+							<Route path="/sobre" element={<AboutPage />} />
 						</Routes>
 					</div>
 					<Footer />
