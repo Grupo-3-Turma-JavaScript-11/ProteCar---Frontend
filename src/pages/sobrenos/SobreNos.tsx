@@ -5,7 +5,7 @@ function SobreNos() {
     return (
         <main className="font-sans">
            {/* Texto Sobre */}
-            <div className="px-8 grid md:grid-cols-2 gap-12 items-center h-screen bg-white">
+            <div className="px-8 grid md:grid-cols-2 gap-12 items-center  bg-white">
                 <div className="space-y-6 pl-12 ">
                     <h2 className="text-5xl font-bold text-slate-900 underline decoration-blue-400">Sobre Nós:</h2>
                     <p className="text-slate-600 text-xl leading-relaxed">
