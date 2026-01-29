@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
           <div className="flex flex-1 justify-center items-center text-xl gap-8">
             <Link to={'/'} className="hover:text-blue-400 hover:underline transition">Home</Link>
             <Link to={'/categorias'} className="hover:text-blue-400 hover:underline transition">Categorias</Link>
-            <p className="hover:text-blue-400 hover:underline transition">Seguros</p>
+            <Link to={'/produtos'} className="hover:text-blue-400 hover:underline transition">Seguros</Link>
             <p className="hover:text-blue-400 hover:underline transition" >Sobre Nós</p>
             <p className="hover:text-blue-400 hover:underline transition" >Fale Conosco</p>            
           </div>

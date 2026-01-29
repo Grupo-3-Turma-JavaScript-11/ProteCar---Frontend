@@ -15,8 +15,7 @@ function FormSeguro() {
 
     const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '', })
     
-    const [produto, setProduto] = useState<Produto>({ 
-        id: 0, numeroApolice: '', anoCarro: '', valor: 0, dataInicio: '', dataFim: '',} as Produto)
+    const [produto, setProduto] = useState<Produto>({ id: 0, numeroApolice: '', anoCarro: '', valor: 0, dataInicio: '', dataFim: '', categoria: null } as Produto)
 
     // const { usuario, handleLogout } = useContext(AuthContext)
     // const token = usuario.token
@@ -93,7 +92,7 @@ function FormSeguro() {
 
         if (id !== undefined) {
             try {
-                await atualizar(`/produtos/${produto.id}`, produto, setProduto,);
+                await atualizar(`/produtos/${produto.id}`, produto, setProduto);
 
                 alert('Produto atualizado com sucesso')
 
@@ -107,7 +106,7 @@ function FormSeguro() {
 
         } else {
             try {
-                await cadastrar(`/produtos`, produto, setProduto,)
+                await cadastrar(`/produtos`, produto, setProduto);
 
                 alert('Produto cadastrado com sucesso');
 
@@ -172,6 +171,7 @@ function FormSeguro() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
+<<<<<<< HEAD
                     <label htmlFor="titulo">Data de Início da Apólice</label>
                         <input
                             type="text"
@@ -194,6 +194,30 @@ function FormSeguro() {
                             value={produto.dataFim}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
+=======
+                    <label htmlFor="titulo">dataInicio</label>
+                    <input
+                        type="date"
+                        placeholder="Data Inicio"
+                        name="dataInicio"
+                        required
+                        className="border-2 border-slate-700 rounded p-2"
+                         value={produto.dataInicio}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="titulo">dataFim</label>
+                    <input
+                        type="date"
+                        placeholder="Data Fim"
+                        name="dataFim"
+                        required
+                        className="border-2 border-slate-700 rounded p-2"
+                         value={produto.dataFim}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+>>>>>>> 754f361d75183802c7812c8a35157b2fbbb923fd
                 </div>
                 <div className="flex flex-col gap-2">
                     <p>Categoria do Produto</p>

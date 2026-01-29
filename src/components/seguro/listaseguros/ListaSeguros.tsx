@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
 import { buscar } from "../../../service/Service";
 import type Produto from "../../../models/Produto";
@@ -7,7 +7,7 @@ import CardSeguro from "../cardseguro/CardSeguro";
 
 function ListaSeguros() {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -54,6 +54,9 @@ function ListaSeguros() {
                 </div>
             )}
 
+            <div className="w-full h-screen flex flex-col p-20 items-center ">
+            <button className="bg-gradient-to-r from-blue-800 to-blue-400 mb-30 rounded-2xl text-3xl text-white font-semibold h-15 w-120 self-center hover:bg-blue-900" onClick={() => navigate('/cadastrarproduto')}>Cadastrar novo Produto</button>
+
             <div className="flex justify-center w-full my-4">
                 <div className="container flex flex-col">
 
@@ -72,6 +75,7 @@ function ListaSeguros() {
                             }
                     </div>
                 </div>
+            </div>
             </div>
         </>
     )
