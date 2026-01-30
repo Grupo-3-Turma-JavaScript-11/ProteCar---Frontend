@@ -8,7 +8,7 @@ function Footer() {
     return (
         <>
             <div className="flex justify-center bg-blue-950 text-white">
-                <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 py-10 items-start">
+                <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 py-10 items-start pl-4">
                     <div>
                         <h2 className="font-semibold  text-xl mb-4">Sobre a ProteCar</h2>
                             <ul className="space-y-2 text-l text-gray-200 ">
@@ -21,9 +21,9 @@ function Footer() {
                     <div>
                         <h2 className="font-semibold  text-xl mb-4">Produtos</h2>
                             <ul className="space-y-2 text-l text-gray-200 ">
-                                <li className="hover:text-blue-400 hover:underline transition">Seguro Alfa</li>
-                                <li className="hover:text-blue-400 hover:underline transition">Seguro Beta</li>
-                                <li className="hover:text-blue-400 hover:underline transition">Seguro Gama</li>
+                                <li className="hover:text-blue-400 hover:underline transition">Seguro Premium</li>
+                                <li className="hover:text-blue-400 hover:underline transition">Seguro Intermediario</li>
+                                <li className="hover:text-blue-400 hover:underline transition">Seguro Basico</li>
                                 <li className="hover:text-blue-400 hover:underline transition">Seguro Delta</li>
                             </ul>
                     </div>

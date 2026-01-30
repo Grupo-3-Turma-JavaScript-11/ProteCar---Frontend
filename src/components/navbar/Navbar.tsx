@@ -18,9 +18,10 @@ import { Link } from "react-router-dom";
             <Link to={'/'} className="hover:text-blue-400 hover:underline transition">Home</Link>
             <Link to={'/categorias'} className="hover:text-blue-400 hover:underline transition">Categorias</Link>
             <Link to={'/produtos'} className="hover:text-blue-400 hover:underline transition">Seguros</Link>
-            <p className="hover:text-blue-400 hover:underline transition" >Sobre Nós</p>
-            <p className="hover:text-blue-400 hover:underline transition" >Fale Conosco</p>            
+            <Link to={'/sobrenos'} className="hover:text-blue-400 hover:underline transition" >Sobre Nós</Link>
+            <Link to={'/faleconosco'} className="hover:text-blue-400 hover:underline transition">Fale Conosco</Link>            
           </div>
+
 
           {/* Busca + botão */}
           <div className="flex gap-4">
